@@ -39,7 +39,6 @@ async function main() {
   server.use("/user", userRouter);
   server.use("/content", contentRouter);
 
-  // !! ลืมเรียก middleware
   contentRouter.use(handlerMiddleware.jwtMiddleware.bind(handlerMiddleware));
 
   //Check server status
